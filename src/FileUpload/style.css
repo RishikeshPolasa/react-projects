@@ -1,0 +1,21 @@
+.fileWrapper {
+  width: 20rem;
+  height: 10rem;
+  border: 1px solid red;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fileWrapper .imageWrapper {
+  width: 3rem;
+  height: 3rem;
+}
+.fileWrapper .imageWrapper img {
+  width: 100%;
+  height: 100%;
+}
+.fileWrapper input {
+  display: none;
+}

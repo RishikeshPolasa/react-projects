@@ -1,0 +1,54 @@
+.fileUpload {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+}
+.fileWrapper {
+  width: 20rem;
+  height: 10rem;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.design2 {
+  border-radius: 0;
+  cursor: pointer;
+}
+.fileWrapper .imageWrapper {
+  width: 3rem;
+  height: 3rem;
+}
+.fileWrapper .imageWrapper svg {
+  width: 100%;
+  height: 100%;
+}
+.fileWrapper input {
+  display: none;
+}
+.fileWrapper .fileText {
+  color: white;
+  margin-top: 1rem;
+}
+.selectedFileWrapper {
+  max-width: 20rem;
+  margin-top: 2rem;
+  border: 1px solid white;
+}
+.selectedFileWrapper .selectedFile {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.selectedFileWrapper .selectedFile img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: fill;
+}
+.selectedFileWrapper .selectedFile .filename {
+  color: white;
+  font-size: 1rem;
+  margin-left: 1rem;
+}

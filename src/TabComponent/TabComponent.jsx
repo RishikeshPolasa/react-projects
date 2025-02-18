@@ -6,22 +6,32 @@ import { TabWrapper, TabHeader, Tab, ActiveComponentWrapper } from "./Style";
 
 function TabComponent() {
   const [activeTab, setActiveTab] = useState(0);
-  const [tabState, setTabState] = useState({});
+  const [tabState, setTabState] = useState({
+    profile: {},
+    settings: {},
+    interest: {},
+  });
   const [error, setError] = useState({});
   const tabsConfig = [
     {
-      name: "Profile",
+      name: "profile",
       component: Profile,
     },
     {
-      name: "Interest",
+      name: "interest",
       component: Interest,
     },
     {
-      name: "Settings",
+      name: "settings",
       component: Settings,
     },
   ];
+
+  const map = {
+    0: "profile",
+    1: "interest",
+    2: "settings",
+  };
 
   const ActiveComponent = tabsConfig[activeTab].component;
 
@@ -114,10 +124,16 @@ function TabComponent() {
   const hanldeSubmit = () => {
     let isError = false;
     Object.keys(error).forEach((e) => {
-      if (Object.keys(e).length !== 0) isError = true;
+      if (Object.keys(error[e]).length !== 0) {
+        isError = true;
+      }
     });
     if (isError) {
       alert("Please fix the errors");
+      return;
+    }
+    if (Object.keys(tabState).length !== 3) {
+      alert("Please fill all blanks");
       return;
     }
     alert("result submitted successfully");
@@ -126,9 +142,19 @@ function TabComponent() {
   };
 
   const handleTab = (index, name) => {
-    // if (Object.keys(name).length !== 0) {
-    //   return;
-    // }
+    if (activeTab === 0) {
+      if (Object.keys(tabState[map[activeTab]]).length !== 3) {
+        return;
+      }
+    } else if (activeTab === 1) {
+      if (Object.keys(tabState[map[activeTab]]).length !== 1) {
+        return;
+      }
+    } else {
+      if (Object.keys(tabState[map[activeTab]]).length !== 2) {
+        return;
+      }
+    }
     setActiveTab(index);
   };
 

@@ -8,6 +8,7 @@ import FileUploadDesign2 from "./FileUpload/FileUploadDesign2";
 import Pagination from "./Pagination/index";
 import OTPField from "./OTPField";
 import Accordian from "./Accordian/index";
+import TabComponent from "./TabComponent/TabComponent";
 const Home = () => (
   <>
     <h1>Home</h1>
@@ -26,6 +27,9 @@ const Home = () => (
     <div>
       <Link to="/accordian">Accordian</Link>
     </div>
+    <div>
+      <Link to="/tab-component">Tab Component</Link>
+    </div>
   </>
 );
 function App() {
@@ -41,6 +45,7 @@ function App() {
           <Route path="/pagination" element={<Pagination />} />
           <Route path="/otpfield" element={<OTPField length={4} />} />
           <Route path="/accordian" element={<Accordian />} />
+          <Route path="/tab-component" element={<TabComponent />} />
         </Routes>
       </Router>
     </div>

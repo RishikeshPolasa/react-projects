@@ -10,6 +10,7 @@ import OTPField from "./OTPField";
 import Accordian from "./Accordian/index";
 import TabComponent from "./TabComponent/TabComponent";
 import FileExplorer from "./FileExplorer/FileExplorer";
+import GreenLights from "./GreenLights";
 const Home = () => (
   <>
     <h1>Home</h1>
@@ -34,6 +35,9 @@ const Home = () => (
     <div>
       <Link to="/fileExplorer">File Explorer</Link>
     </div>
+    <div>
+      <Link to="/greenLights">Green Lights</Link>
+    </div>
   </>
 );
 function App() {
@@ -51,6 +55,7 @@ function App() {
           <Route path="/accordian" element={<Accordian />} />
           <Route path="/tab-component" element={<TabComponent />} />
           <Route path="/fileExplorer" element={<FileExplorer />} />
+          <Route path="/greenLights" element={<GreenLights />} />
         </Routes>
       </Router>
     </div>

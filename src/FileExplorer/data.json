@@ -1,0 +1,29 @@
+ [
+    {
+        "name":"src",
+        "isFolder":true,
+        "path":"src",
+        "children":[
+            {
+                "name":"components",
+                "isFolder":true,
+                "path":"src/components",
+                "children":[
+                   
+                ]
+            }
+        ]
+    },
+    {
+        "name":"public",
+        "isFolder":true,
+        "path":"public",
+        "children":[]
+    },
+    {
+        "name":"package.json",
+        "isFolder":false,
+        "path":"package.json",
+        "children":[]
+    }
+]

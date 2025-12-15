@@ -9,6 +9,7 @@ import Pagination from "./Pagination/index";
 import OTPField from "./OTPField";
 import Accordian from "./Accordian/index";
 import TabComponent from "./TabComponent/TabComponent";
+import FileExplorer from "./FileExplorer/FileExplorer";
 const Home = () => (
   <>
     <h1>Home</h1>
@@ -30,6 +31,9 @@ const Home = () => (
     <div>
       <Link to="/tab-component">Tab Component</Link>
     </div>
+    <div>
+      <Link to="/fileExplorer">File Explorer</Link>
+    </div>
   </>
 );
 function App() {
@@ -46,6 +50,7 @@ function App() {
           <Route path="/otpfield" element={<OTPField length={4} />} />
           <Route path="/accordian" element={<Accordian />} />
           <Route path="/tab-component" element={<TabComponent />} />
+          <Route path="/fileExplorer" element={<FileExplorer />} />
         </Routes>
       </Router>
     </div>
